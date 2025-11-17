@@ -1,5 +1,5 @@
 <?php
-/*
+
 session_start();
 
 include("connect.php");
@@ -8,7 +8,7 @@ if(isset($_GET["logout"]))
 	{
 		session_unset(); 
 	}
-*/
+
 
 // print_r($_SESSION);
 
@@ -51,7 +51,7 @@ if(isset($_GET["logout"]))
 		<!--
 		<script type="text/javascript" src="js/category_changer.js"></script>
 		
-		<script type="text/javascript" src="js/category_menu.js"></script>
+		
 
 		<script type="text/javascript" src="js/registry_controller.js"></script>
 
@@ -65,85 +65,70 @@ if(isset($_GET["logout"]))
 
 		<!--  -->
 
-			
+		<script type="text/javascript" src="js/header_menu.js"></script>	
 		
 	</head>
 	
 	<body>
 		<header class="site-header">
-
-			<div class="site-header__inside" >
-
-				<div class="site-header__logo">
-					<!--<a href="index.php"><img id="logo" src=""></a>-->
-					<a href="index.php"><img id="logo" src="images/laboratory_hun.jpg"></a>
-				</div>
-			
-				<div class="site-header_search">				
-						<button class="search_button" id="search_button">
-							kereső gomb
-						</button>	
-				</div>
+			<div class="site-header__inside" id="site-header__inside">
+				<?php
+				include("templates/header_template.php");
+				?>	
 				
-				<div class="site-header__navbar" id="site-header__navbar">
-					<nav>
-						témakör választó/oldal felfedezése
-					</nav>
-				</div>
-				
-				<div class="site-header__donation" id="site-header__donation">
-					<div class="donate-button" id="donate-button">
-						donációs gomb
-					</div>
-				</div>
-				
-				<!-- <a class='menu_button_logout' href='index.php?logout=1'>Session_clear</a> -->
-				
-				<div class="site-header__right" id="site-header__right">
-					belépés és regisztráció							
-				</div>
 			</div>
 		</header>
 			
-		<nav class="category-bar">
-
-			<!-- <div class="category_menu_label" id="category_menu_label" ></div> -->
-
-			<div class="category-bar__inside" id="category-bar__inside">
-				<ul class="category-bar__list">
-					<li><a href="">Fizika témakörök</a></li>
-					<li><a href="">Matematika témakörök</a></li>
-					<li><a href="">Érettségi</a></li>
-					<li><a href="">Hasznos linkek</a></li>
-				</ul>	
-			</div>
-		</nav>
-		
-		
-		
+				
 		<main class="main-content" id="main-content">
+
+			<section class="hero">
+				<h1>Üdvözlünk az Oktatási Portálon!</h1>
+				<p>Fedezd fel tanfolyamainkat és fejlődj velünk!</p>
+				<button>Vendégkönyv</button>
+			</section>
+
+			<nav class="category-bar">
+				<!-- <div class="category_menu_label" id="category_menu_label" ></div> -->
+				<div class="category-bar__inside" id="category-bar__inside">
+					<ul class="category-bar__list horizontal-list">
+						<li><a href="">Fizika témakörök</a></li>
+						<li><a href="">Matematika témakörök</a></li>
+						<li><a href="">Érettségi</a></li>
+						<li><a href="">Hasznos linkek</a></li>
+						<li><a href="">Videók</a></li>
+					</ul>	
+				</div>
+			</nav>
 			
-			<div class="topic-box" id="topic-box">
-				<img src="images/laboratory_eng.jpg">
-				<img src="images/laboratory_eng.jpg">
-				
-			</div>	
+			<section class="topic-box" id="topic-box">
+				<div class="topic-box_left">
+					Bal oldalsáv
+				</div>	
+				<div class="topic-box_mid">
+					<img src="images/laboratory_eng.jpg">
+					<img src="images/laboratory_eng.jpg">
+				</div>	
+				<div class="topic-box_right">
+					Jobb oldalsáv
+				</div>					
+			</section>	
 		
-			<div class="content-box" id="content-box">
+			<section class="content-box" id="content-box">
 				<img src="images/laboratory_hun.jpg">
 				<img src="images/laboratory_hun.jpg">
 				<img src="images/laboratory_hun.jpg">
 				<img src="images/laboratory_hun.jpg">
 				<img src="images/laboratory_hun.jpg">
 				<img src="images/laboratory_hun.jpg">
-				<img src="images/laboratory_hun.jpg">
-				
-			</div>
+				<img src="images/laboratory_hun.jpg">				
+			</section>
 			
 		</main>
 
 		<footer class="footer" id="footer">
 			<p>© 2025 Oktatási honlap</p>
+			<p>Támogatás</p>
 			<p>kapcsolat, névjegy</p>
 		</footer>
 	</body>

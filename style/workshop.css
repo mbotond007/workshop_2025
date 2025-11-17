@@ -8,12 +8,14 @@ body
 
 .site-header
 {
+	z-index: 10;
 	position: sticky;
 	top: 0;
 	display:flex;
 	justify-content:center;
-	margin-top:5px;
+	/*margin-top:5px;*/
 	background:#aaaaaa;
+	min-height:40px;
 }
 
 .site-header__inside
@@ -23,6 +25,7 @@ body
 	background:#cccccc;
 	justify-content:space-around;
 	align-items:center;
+	padding:8px;
 }
 .site-header__inside img
 {
@@ -72,6 +75,8 @@ body
 
 .category-bar
 {
+	position: sticky;
+	top: 40px;
 	display:flex;
 	justify-content:center;
 	margin-top:5px;
@@ -89,24 +94,24 @@ body
 	
 }
 
-ul.category-bar__list
-{
-	list-style-type: none;
-	display: flex;
-	/*justify-content:space-between;*/
-}
-
 ul.category-bar__list li a 
 {
   display: block;
   color: white;
-  padding: 14px 16px;
+  padding: 4px 16px;
   text-decoration: none;
 }
 
 ul.category-bar__list li a:hover 
 {
   background-color: #111111;
+}
+
+.horizontal-list
+{
+	list-style-type: none;
+	display: flex;
+	/*justify-content:space-between;*/
 }
 
 .main-content
@@ -120,8 +125,9 @@ ul.category-bar__list li a:hover
 
 .topic-box
 {
+	display:flex;
+	width:100%;
 	margin:20px auto;
-	width: 80%;
 	background:#22FF22;
 }
 
@@ -129,6 +135,18 @@ ul.category-bar__list li a:hover
 {
 	display:block;
 	margin:auto;
+}
+
+.topic-box_left
+{
+	margin:20px auto;
+	width: 20%;
+}
+
+.topic-box_right
+{
+	margin:20px auto;
+	width: 20%;
 }
 
 .content-box
@@ -141,6 +159,14 @@ ul.category-bar__list li a:hover
 {
 	display:block;
 	margin:auto;
+}
+
+.hero 
+{
+	margin-top: 50px;
+	padding: 2rem 2rem;
+	background-color: #e0ecff;
+	text-align: center;
 }
 
 .usermenu
