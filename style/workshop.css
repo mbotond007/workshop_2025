@@ -14,7 +14,7 @@ body
 	display:flex;
 	justify-content:center;
 	/*margin-top:5px;*/
-	background:#aaaaaa;
+	/*background:#aaaaaa;*/
 	min-height:40px;
 }
 
@@ -22,14 +22,16 @@ body
 {
 	display:flex;
 	width:90%;
-	background:#cccccc;
+	/*background:#cccccc;*/
 	justify-content:space-around;
 	align-items:center;
-	padding:8px;
+	padding:3px;
+	border:2px solid #aabbdd;
+	border-radius:8px;
 }
 .site-header__inside img
 {
-	height:20px;
+	height:55px;
 	margin:0px;
 	padding:0px;
 	cursor:pointer;
@@ -45,7 +47,7 @@ body
 
 .site-header__logo
 {
-	background:skyblue;
+	/*background:skyblue;*/
 }
 
 .site-header__search
@@ -65,7 +67,7 @@ body
 
 .footer
 {
-	background:pink;
+	background:#bbbbdd;
 	position: sticky;
 	bottom: 0;
 	display:flex;
@@ -76,7 +78,7 @@ body
 .category-bar
 {
 	position: sticky;
-	top: 40px;
+	top: 50px;
 	display:flex;
 	justify-content:center;
 	margin-top:5px;
@@ -128,7 +130,7 @@ ul.category-bar__list li a:hover
 	display:flex;
 	width:100%;
 	margin:20px auto;
-	background:#22FF22;
+	background:#9999ff;
 }
 
 .topic-box img
@@ -163,10 +165,17 @@ ul.category-bar__list li a:hover
 
 .hero 
 {
+	display:flex;
+	justify-content:space-between;
 	margin-top: 50px;
 	padding: 2rem 2rem;
 	background-color: #e0ecff;
 	text-align: center;
+}
+
+.hero img
+{
+	height:150px;
 }
 
 .usermenu
@@ -189,7 +198,7 @@ ul.category-bar__list li a:hover
 	cursor:pointer;
 }
 
-.menu_button
+.header-button
 {
 	text-decoration:none;
 	font-weight:bold;
@@ -322,6 +331,13 @@ ul.category-bar__list li a:hover
 {
 	color:#f07330;
 }
+
+.form-box
+{
+	position: sticky;
+	top: 120px;
+}
+
 .form_div
 {
 	width:25%;

@@ -6,7 +6,8 @@ include("connect.php");
 
 if(isset($_GET["logout"]))   
 	{
-		session_unset(); 
+		session_unset();
+		session_destroy();
 	}
 
 
@@ -66,14 +67,17 @@ if(isset($_GET["logout"]))
 		<!--  -->
 
 		<script type="text/javascript" src="js/header_menu.js"></script>	
+		<script type="text/javascript" src="js/registry_controller.js"></script>
+		<script type="text/javascript" src="js/login_controller.js"></script>
 		
 	</head>
 	
 	<body>
 		<header class="site-header">
 			<div class="site-header__inside" id="site-header__inside">
+				
 				<?php
-				include("templates/header_template.php");
+				//include("templates/header_template.php");
 				?>	
 				
 			</div>
@@ -82,13 +86,24 @@ if(isset($_GET["logout"]))
 				
 		<main class="main-content" id="main-content">
 
-			<section class="hero">
-				<h1>Üdvözlünk az Oktatási Portálon!</h1>
-				<p>Fedezd fel tanfolyamainkat és fejlődj velünk!</p>
-				<button>Vendégkönyv</button>
+			<section class="hero" id="hero">
+				
+				<div class="hero_left">
+					<img src="images/logo2.svg" alt="Molnár Botond Fizika Szertára">
+				</div>	
+				<div class="hero_mid">
+					<h1>Üdvözlöm a Fizika Szertárban!</h1>
+					<h2>Ingyenes ismeretterjesztő tartalmak és tanagyagok fizikából és matematikából!</h2>
+					<h2>A házigazda: Molnár Botond</h2>
+					<button>Vendégkönyv</button>
+				</div>	
+				<div class="hero_right">
+					Jobb oldalsáv
+				</div>					
+				
 			</section>
 
-			<nav class="category-bar">
+			<nav class="category-bar" id="category-bar">
 				<!-- <div class="category_menu_label" id="category_menu_label" ></div> -->
 				<div class="category-bar__inside" id="category-bar__inside">
 					<ul class="category-bar__list horizontal-list">
@@ -100,14 +115,17 @@ if(isset($_GET["logout"]))
 					</ul>	
 				</div>
 			</nav>
-			
+
+			<section class="form-box" id="form-box">
+			</section>	
+
 			<section class="topic-box" id="topic-box">
 				<div class="topic-box_left">
 					Bal oldalsáv
 				</div>	
 				<div class="topic-box_mid">
-					<img src="images/laboratory_eng.jpg">
-					<img src="images/laboratory_eng.jpg">
+					<img src="images/laboratory_en.jpg">
+					<img src="images/laboratory_en.jpg">
 				</div>	
 				<div class="topic-box_right">
 					Jobb oldalsáv
@@ -115,13 +133,12 @@ if(isset($_GET["logout"]))
 			</section>	
 		
 			<section class="content-box" id="content-box">
-				<img src="images/laboratory_hun.jpg">
-				<img src="images/laboratory_hun.jpg">
-				<img src="images/laboratory_hun.jpg">
-				<img src="images/laboratory_hun.jpg">
-				<img src="images/laboratory_hun.jpg">
-				<img src="images/laboratory_hun.jpg">
-				<img src="images/laboratory_hun.jpg">				
+				<img src="images/laboratory_hu.jpg">
+				<img src="images/laboratory_hu.jpg">
+				<img src="images/laboratory_hu.jpg">
+				<img src="images/laboratory_hu.jpg">
+				<img src="images/laboratory_hu.jpg">
+				<img src="images/laboratory_hu.jpg">
 			</section>
 			
 		</main>
